@@ -736,11 +736,20 @@ func (ec *Client) erc20TokenOps(
 
 		if ec.p.ChainID.Uint64() == 137 { // mainnet
 			currencyMap = map[string]*RosettaTypes.Currency{
+				// bridged USDC
 				"0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174": {
 					Symbol:   "USDC",
 					Decimals: 6,
 					Metadata: map[string]interface{}{
 						ContractAddressKey: "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+					},
+				},
+				// native USDC
+				"0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359": {
+					Symbol:   "USDC",
+					Decimals: 6,
+					Metadata: map[string]interface{}{
+						ContractAddressKey: "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
 					},
 				},
 				"0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619": {
@@ -785,11 +794,20 @@ func (ec *Client) erc20TokenOps(
 			}
 		} else if ec.p.ChainID.Uint64() == 80001 { // mumbai
 			currencyMap = map[string]*RosettaTypes.Currency{
+				// bridged USDC
 				"0x0FA8781a83E46826621b3BC094Ea2A0212e71B23": {
 					Symbol:   "USDC",
 					Decimals: 6,
 					Metadata: map[string]interface{}{
 						ContractAddressKey: "0x0FA8781a83E46826621b3BC094Ea2A0212e71B23",
+					},
+				},
+				// native USDC
+				"0x9999f7Fea5938fD3b1E26A12c3f2fb024e194f97": {
+					Symbol:   "USDC",
+					Decimals: 6,
+					Metadata: map[string]interface{}{
+						ContractAddressKey: "0x9999f7Fea5938fD3b1E26A12c3f2fb024e194f97",
 					},
 				},
 				"0xA6FA4fB5f76172d178d61B04b0ecd319C5d1C0aa": {
